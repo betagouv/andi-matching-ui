@@ -20,10 +20,11 @@ export class MatchingResultComponent implements OnInit {
     this.pmsmpService.getPmsmpList().subscribe(
       pmsmpListFound => {
         this.pmsmpList = pmsmpListFound;
+
+        console.log(">>>>>>>>>>>   ", this.pmsmpList);
       },
       err => {},
       () => {
-        console.log(">>>>>>>>>>>   ", this.pmsmpList);
       }
     );
   }
