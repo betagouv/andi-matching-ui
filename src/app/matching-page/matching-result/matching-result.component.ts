@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { PmsmpFound } from "../../models/pmsmp-found";
+import { PmsmpResult } from "../../models/pmsmp-result";
 import { PmsmpService } from "../../services/pmsmp.service";
 
 @Component({
@@ -8,7 +8,7 @@ import { PmsmpService } from "../../services/pmsmp.service";
   styleUrls: ["./matching-result.component.scss"]
 })
 export class MatchingResultComponent implements OnInit {
-  pmsmpList: PmsmpFound[];
+  pmsmpList: PmsmpResult[];
 
   constructor(private pmsmpService: PmsmpService) {}
 

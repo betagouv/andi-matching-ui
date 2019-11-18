@@ -24,12 +24,30 @@ export class PmsmpRequest {
 export class Address {
   type: ADDRESS_TYPE.string | ADDRESS_TYPE.geoapigouv;
   value: string;
+
+  constructor(options: {
+    type: ADDRESS_TYPE.string | ADDRESS_TYPE.geoapigouv;
+    value: string;
+  }) {
+    this.type = options.type;
+    this.value = options.value;
+  }
 }
 
 export class Criteria {
   type: CRITERIA_TYPE.distance | CRITERIA_TYPE.rome_codes;
   value: any; // optional
   priority: number;
+
+  constructor(options: {
+    type: CRITERIA_TYPE.distance | CRITERIA_TYPE.rome_codes;
+    value: any;
+    priority: number;
+  }) {
+    this.type = options.type;
+    this.value = options.value;
+    this.priority = options.priority;
+  }
 }
 
 export enum ADDRESS_TYPE {
