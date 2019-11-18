@@ -10,19 +10,8 @@ import { PmsmpService } from "../../services/pmsmp.service";
 export class MatchingResultComponent implements OnInit {
   pmsmpList: PmsmpResult;
 
-  constructor(private pmsmpService: PmsmpService) {}
+  constructor() {}
 
   ngOnInit() {
-    // this.loadPmsmpList();
   }
-
-  /* private loadPmsmpList() {
-    this.pmsmpService.getPmsmpList(address, criteria).subscribe(
-      pmsmpListFound => {
-        this.pmsmpList = pmsmpListFound;
-
-        console.log(">>>>>>>>>>>   ", this.pmsmpList);
-      }
-    );
-  } */
 }

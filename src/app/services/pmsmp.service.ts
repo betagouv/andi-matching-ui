@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { PmsmpResult } from "../models/pmsmp-result";
+import { PmsmpResult } from '../models/pmsmp-result';
 import * as moment from "moment";
 import { UUID } from "angular2-uuid";
 import { PmsmpRequest, Criteria, Address } from "../models/pmsmp-request";
@@ -11,6 +11,7 @@ import { PmsmpRequest, Criteria, Address } from "../models/pmsmp-request";
 export class PmsmpService {
 
   _session_id: string;
+  pmsmpResult: PmsmpResult;
 
   constructor(private http: HttpClient) {}
 

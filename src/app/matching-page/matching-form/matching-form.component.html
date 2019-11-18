@@ -1,12 +1,14 @@
 <div class="form-container">
-  <form action="post">
+  <form (ngSubmit)="loadPmsmpList(userForm.value)" #userForm="ngForm">
     <label for="adress">Adresse postale</label>
     <input
       type="text"
       class="form-control form-control-lg"
       id="adress"
       placeholder="ex: 10 Rue de Flandre, 75001"
+      name="adress"
       required
+      ngModel
     />
     <label for="job">Métier souhaité</label>
     <input
@@ -14,7 +16,9 @@
       class="form-control form-control-lg"
       id="job"
       placeholder="Restaurateur d'art"
+      name="job"
       required
+      ngModel
     />
     <label for="range">Distance</label>
     <input
@@ -22,7 +26,9 @@
       class="form-control form-control-lg"
       id="range"
       placeholder="ex: 3km"
+      name="range"
       required
+      ngModel
     />
     <button type="submit" class="btn btn-primary">Rechercher</button>
   </form>

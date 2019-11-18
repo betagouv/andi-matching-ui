@@ -10,6 +10,8 @@ import { MatchingHeaderComponent } from "./shared/matching-header/matching-heade
 import { MatchingResultComponent } from "./matching-page/matching-result/matching-result.component";
 import { HttpClientModule } from "@angular/common/http";
 
+import { FormsModule } from "@angular/forms";
+
 const appRoutes: Routes = [
   { path: "matching", component: MatchingPageComponent },
   { path: "", redirectTo: "/matching", pathMatch: "full" }
@@ -30,7 +32,8 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [MatchingPageComponent]
