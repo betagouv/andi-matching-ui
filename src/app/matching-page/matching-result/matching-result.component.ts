@@ -8,24 +8,21 @@ import { PmsmpService } from "../../services/pmsmp.service";
   styleUrls: ["./matching-result.component.scss"]
 })
 export class MatchingResultComponent implements OnInit {
-  pmsmpList: PmsmpResult[];
+  pmsmpList: PmsmpResult;
 
   constructor(private pmsmpService: PmsmpService) {}
 
   ngOnInit() {
-    this.loadPmsmpList();
+    // this.loadPmsmpList();
   }
 
-  private loadPmsmpList() {
-    this.pmsmpService.getPmsmpList().subscribe(
+  /* private loadPmsmpList() {
+    this.pmsmpService.getPmsmpList(address, criteria).subscribe(
       pmsmpListFound => {
         this.pmsmpList = pmsmpListFound;
 
         console.log(">>>>>>>>>>>   ", this.pmsmpList);
-      },
-      err => {},
-      () => {
       }
     );
-  }
+  } */
 }

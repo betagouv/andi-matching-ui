@@ -1,23 +1,23 @@
 export class PmsmpRequest {
   readonly _v: number = 1;
-  _timestamp: number;
+  _timestamp: string;
   _query_id: string;
   _session_id: string;
   address: Address;
   criteria: Criteria[];
 
-  constructor(options: {
-    _timestamp: number;
-    _query_id: string;
-    _session_id: string;
-    address: Address;
-    criteria: Criteria[];
-  }) {
-    this._timestamp = options._timestamp;
-    this._query_id = options._query_id;
-    this._session_id = options._session_id;
-    this.address = options.address;
-    this.criteria = options.criteria;
+  constructor(
+    _timestamp: string,
+    _query_id: string,
+    _session_id: string,
+    address: Address,
+    criteria: Criteria[]
+  ) {
+    this._timestamp = _timestamp;
+    this._query_id = _query_id;
+    this._session_id = _session_id;
+    this.address = address;
+    this.criteria = criteria;
   }
 }
 
@@ -25,12 +25,12 @@ export class Address {
   type: ADDRESS_TYPE.string | ADDRESS_TYPE.geoapigouv;
   value: string;
 
-  constructor(options: {
-    type: ADDRESS_TYPE.string | ADDRESS_TYPE.geoapigouv;
-    value: string;
-  }) {
-    this.type = options.type;
-    this.value = options.value;
+  constructor(
+    type: ADDRESS_TYPE.string | ADDRESS_TYPE.geoapigouv,
+    value: string
+  ) {
+    this.type = type;
+    this.value = value;
   }
 }
 
@@ -39,14 +39,14 @@ export class Criteria {
   value: any; // optional
   priority: number;
 
-  constructor(options: {
-    type: CRITERIA_TYPE.distance | CRITERIA_TYPE.rome_codes;
-    value: any;
-    priority: number;
-  }) {
-    this.type = options.type;
-    this.value = options.value;
-    this.priority = options.priority;
+  constructor(
+    type: CRITERIA_TYPE.distance | CRITERIA_TYPE.rome_codes,
+    value: any,
+    priority: number
+  ) {
+    this.type = type;
+    this.value = value;
+    this.priority = priority;
   }
 }
 
