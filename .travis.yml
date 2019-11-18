@@ -15,7 +15,7 @@ notifications:
 jobs:
   include:
   - stage: test
-    name: Test form_handler component
+    name: Test Matching UI component
     script:
     - echo "Testing commit $TRAVIS_COMMIT"
   - stage: build
