@@ -8,10 +8,11 @@ import { PmsmpService } from "../../services/pmsmp.service";
   styleUrls: ["./matching-result.component.scss"]
 })
 export class MatchingResultComponent implements OnInit {
-  pmsmpList: PmsmpResult;
+  pmsmpResult: PmsmpResult;
 
-  constructor() {}
+  constructor(private pmsmpService: PmsmpService) {}
 
   ngOnInit() {
+    this.pmsmpResult = this.pmsmpService.pmsmpResult;
   }
 }

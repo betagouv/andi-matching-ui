@@ -41,13 +41,18 @@ export class Criteria {
 
   constructor(
     type: CRITERIA_TYPE.distance | CRITERIA_TYPE.rome_codes,
-    value: any,
+    value: number | RomeCode,
     priority: number
   ) {
     this.type = type;
     this.value = value;
     this.priority = priority;
   }
+}
+
+export class RomeCode {
+  code: string;
+  priority: number;
 }
 
 export enum ADDRESS_TYPE {
