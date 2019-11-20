@@ -16,9 +16,9 @@ export class MatchingFormComponent implements OnInit {
     this.pmsmpService
       .getPmsmpList(new Address(ADDRESS_TYPE.string, userRequest.adress), [])
       .subscribe(pmsmpListFound => {
-        console.log("++++ ", pmsmpListFound)
-        console.log("++++ ", this.pmsmpService.pmsmpResult)
-        this.pmsmpService.pmsmpResult = pmsmpListFound;
+        console.log("++++ ", pmsmpListFound);
+        console.log("++++ ", this.pmsmpService.pmsmpResult);
+        this.pmsmpService.pmsmpResult.next(pmsmpListFound);
       });
   }
 }

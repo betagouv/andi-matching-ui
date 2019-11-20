@@ -13,6 +13,8 @@ export class MatchingResultComponent implements OnInit {
   constructor(private pmsmpService: PmsmpService) {}
 
   ngOnInit() {
-    this.pmsmpResult = this.pmsmpService.pmsmpResult;
+    this.pmsmpService.pmsmpResult.subscribe((res) => {
+      this.pmsmpResult = res;
+    });
   }
 }
